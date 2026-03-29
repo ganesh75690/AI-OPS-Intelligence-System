@@ -47,6 +47,11 @@ This project provides a structured AI training environment where agents learn to
 - ⚙️ Decide correct actions (assign, escalate, ignore)
 - 📊 Optimize decisions using reward-based evaluation
 
+
+<img width="1916" height="867" alt="image" src="https://github.com/user-attachments/assets/6449ce57-3030-4a9b-8323-2cbe1845a452" />
+
+<img width="1916" height="853" alt="image" src="https://github.com/user-attachments/assets/d9433477-a144-403d-9e8c-766663d80404" />
+
 ---
 
 🧩 Features
