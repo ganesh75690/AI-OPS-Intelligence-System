@@ -141,6 +141,7 @@ ai-ops-environment/
 ├── inference.py
 ├── main.py
 ├── Dockerfile
+├──pyproject.toml
 ├── requirements.txt
 └── openenv.yaml
 
@@ -224,3 +225,4 @@ Ganesh
 This project demonstrates how AI agents can be trained to make intelligent operational decisions in real-world environments using structured simulations.
 
 ---
+Updated for validation
