@@ -4,7 +4,7 @@ from environment import OpsEnv
 from models import Action
 from tasks import get_tasks
 from grader import grade_easy
-from baseline import run_baseline
+from inference import run_baseline
 
 app = FastAPI()
 env = OpsEnv()
