@@ -52,6 +52,9 @@ This project provides a structured AI training environment where agents learn to
 
 <img width="1916" height="853" alt="image" src="https://github.com/user-attachments/assets/d9433477-a144-403d-9e8c-766663d80404" />
 
+<img width="1918" height="907" alt="image" src="https://github.com/user-attachments/assets/ea8e931e-983f-4c44-9b3f-f922db6c27ee" />
+
+
 ---
 
 🧩 Features
@@ -65,6 +68,15 @@ This project provides a structured AI training environment where agents learn to
 - ✅ Baseline agent for reproducible evaluation
 - ✅ Dockerized deployment
 - ✅ Live API hosted on Hugging Face
+
+## 💡 Why This Matters
+
+This system demonstrates how AI can assist in:
+
+- Reducing operational delays
+- Improving system reliability
+- Automating decision workflows
+- Enhancing productivity in enterprise environments
 
 
 ## 🚀 System Capabilities
