@@ -66,6 +66,15 @@ This project provides a structured AI training environment where agents learn to
 - ✅ Dockerized deployment
 - ✅ Live API hosted on Hugging Face
 
+
+## 🚀 System Capabilities
+
+- Intelligent task prioritization
+- Adaptive decision-making
+- Reward-driven optimization
+- Scalable environment simulation
+- API-first design for integration
+
 ---
 
 ⚙️ API Endpoints
@@ -87,6 +96,18 @@ A simple rule-based agent is included to:
 - Interact with the environment
 - Generate reproducible results
 - Provide evaluation benchmarks
+
+
+## 🧠 Learning Mechanism
+
+The agent improves through:
+
+1. Observing system state  
+2. Taking actions  
+3. Receiving reward signals  
+4. Adjusting strategy  
+
+This loop enables optimization over time.
 
 ---
 
