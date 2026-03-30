@@ -148,6 +148,9 @@ A rule-based agent is included to:
 - Provide reproducible results
 - Serve as a performance benchmark
 
+![WhatsApp Image 2026-03-30 at 10 47 21 PM](https://github.com/user-attachments/assets/f888173b-cfa4-4564-87a7-1f1b5722d5b5)
+
+
 ---
 
 # 📈 Reward System
@@ -234,16 +237,16 @@ Average Score: 0.7
 ⚙️ Run Locally
 
 pip install -r requirements.txt
-uvicorn main:app --reload
 
 Open:
-👉 http://127.0.0.1:8000/docs
+👉 https://ganesh756-ai-ops-system.hf.space/docs
 
 ---
 
 # 🐳 Docker Support
 
 docker build -t ai-ops-env .
+
 docker run -p 7860:7860 ai-ops-env
 ---
 
@@ -291,6 +294,7 @@ Simulation-driven design
 Reward-based learning
 Real-world operational scenarios
 …it lays the groundwork for next-generation intelligent systems capable of managing complex workflows without constant human intervention.
+
 🚀 This is not just a tool — it is a foundation for building self-learning operational intelligence systems.
 As organizations move toward AI-driven operations, systems like this will play a critical role in:
 Reducing manual effort
