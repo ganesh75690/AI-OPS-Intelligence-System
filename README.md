@@ -2,6 +2,7 @@
 
 Autonomous Decision-Making Environment for Task Prioritization
 
+> 🟢 Status: Live • Deployed • Fully Functional
 🧪 Live Demo
 
 🌐 Hugging Face Space:
@@ -11,36 +12,29 @@ Autonomous Decision-Making Environment for Task Prioritization
 👉 https://ganesh756-ai-ops-system.hf.space/docs
 
 ---
-
 🧠 Overview
 
 AI Ops Intelligence is a simulation environment designed to train and evaluate AI agents for real-world operational decision-making.
-
 It mimics a business operations workflow where agents must:
 
 - Analyze incoming tasks
 - Prioritize them based on urgency
 - Choose appropriate actions
 - Optimize outcomes using reward-based feedback
-
 This environment follows the OpenEnv standard for building agent training systems.
 
 ---
-
 🎯 Problem Statement
 
 Modern organizations face challenges in:
-
 - Managing high volumes of tasks
 - Prioritizing critical incidents
 - Efficient resource allocation
 
 Manual handling leads to inefficiencies and delays.
-
 ---
 
 💡 Solution
-
 This project provides a structured AI training environment where agents learn to:
 
 - 📌 Classify task priorities
@@ -176,6 +170,16 @@ docker run -p 7860:7860 ai-ops-env
 - IT incident management
 - Customer support systems
 - Workflow optimization
+
+## 📊 Evaluation Results
+
+| Task Level | Score |
+|-----------|------|
+| Easy      | 0.9  |
+| Medium    | 0.7  |
+| Hard      | 0.5  |
+
+**Average Score:** 0.7
 
 ---
 
