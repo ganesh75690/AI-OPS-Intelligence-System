@@ -4,6 +4,9 @@ version = "0.1.0"
 description = "AI Ops OpenEnv Environment"
 requires-python = ">=3.9"
 
+[tool.setuptools]
+py-modules = ["main", "inference"]
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["ai_ops_env*"]
