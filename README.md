@@ -1,4 +1,4 @@
-# 🚀 AI Ops Intelligence System 🚀🚀 
+# 🚀 AI Ops Intelligence System  💻 🚀 
 
 Autonomous Decision-Making Environment for Task Prioritization
 
