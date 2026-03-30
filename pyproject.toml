@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "AI Ops OpenEnv Environment"
 requires-python = ">=3.9"
 
-[tool.setuptools]
+[tool.setuptools.package.find]
 packages = ["ai_ops_env"]
 
 [build-system]
