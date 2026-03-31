@@ -352,7 +352,10 @@ An AI agent:
    - Escalate  
    - Resolve  
    - Ignore  
-4. Receives reward feedback based on decision quality  
+4. Receives reward feedback based on decision quality
+
+![WhatsApp Image 2026-03-31 at 9 57 01 AM](https://github.com/user-attachments/assets/3c0d33b8-1afc-40b3-82d0-c552fcfcff4f)
+
 
 ---
 
