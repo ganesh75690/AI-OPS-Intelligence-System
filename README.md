@@ -380,6 +380,13 @@ The system is structured into clearly defined components:
 - Clear separation between environment logic and API layer
 
 ---
+# 🔄 Deterministic & Reproducible
+
+- Baseline agent ensures consistent evaluation results
+- Grading logic is deterministic and testable
+- Designed for repeatable experiments
+
+---
 
 # 🐳 Production-Ready Deployment
 
