@@ -428,6 +428,18 @@ Ensures:
 This project reflects that philosophy by combining AI-driven logic with solid software engineering practices.
 
 ---
+🔬 Research & Extension Potential
+
+This environment can serve as a foundation for:
+
+- Reinforcement learning experimentation (policy optimization, reward shaping)
+- Multi-agent decision systems
+- Benchmarking intelligent agents in operational domains
+- Studying decision-making under uncertainty and system load
+
+## Designed not only as an application, but as a research-ready environment.
+
+---
 
 # 📈 Impact :
 
