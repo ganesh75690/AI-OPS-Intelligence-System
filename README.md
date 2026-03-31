@@ -535,7 +535,7 @@ This project establishes a strong foundation for intelligent decision-making sys
 - Enable real-world deployment for incident management and automation
 - Bridge gap between simulation and production environments
 
-«“Evolving from a simulated decision environment to a fully autonomous operational intelligence system capable of learning, adapting, and optimizing in real-world scenarios.”»
+## “Evolving from a simulated decision environment to a fully autonomous operational intelligence system capable of learning, adapting, and optimizing in real-world scenarios.”
 
 ---
 
