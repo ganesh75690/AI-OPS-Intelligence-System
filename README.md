@@ -60,6 +60,7 @@ Core Capabilities :
 - ⚙️ Action selection (assign, escalate, resolve, ignore)
 - 📊 Reward-based optimization
 - 🔁 Continuous learning loop
+The reward system is designed to reflect real-world trade-offs between accuracy, speed, and decision quality.
 - 
 # 🤖 RL Agent Support :
 
