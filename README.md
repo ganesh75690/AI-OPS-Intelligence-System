@@ -1,4 +1,4 @@
- <h1 align="center"><u>🚀 💻 AI OPS Intelligence System ♾️ 🚀</u></h1>
+ <h1 align="center"><u>🚀 💻 AI OPS Adaptive Agent ♾️ 🚀</u></h1>
 
 Autonomous Decision-Making Environment for Task Prioritization. 
 - “From tasks to intelligence — building systems that learn to decide.”
