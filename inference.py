@@ -70,19 +70,19 @@ def run_baseline():
     steps = 0
     health_history = []
 
-    # ✅ START LOG (MANDATORY)
+    # ✅ START LOG 
     log_start("ai_ops_optimization", "ai_ops_env", "elite_agent_vFinal")
 
     try:
         while steps < 5:
 
-            # 🔥 SYSTEM HEALTH
+            #  SYSTEM HEALTH
             health_score = calculate_system_health(obs.tasks)
             health_history.append(health_score)
 
             for task in obs.tasks:
 
-                # 🔥 SMART DECISION
+                #  SMART DECISION
                 action_type, confidence, reason = smart_agent(task, health_score)
 
                 action = Action(
@@ -94,7 +94,7 @@ def run_baseline():
 
                 rewards.append(reward)
 
-                # 🔥 STRONG ACTION STRING (AI STYLE)
+                #  STRONG ACTION STRING 
                 action_str = (
                     f"{action_type}"
                     f"|p:{task.priority}"
@@ -102,7 +102,7 @@ def run_baseline():
                     f"|h:{health_score:.2f}"
                 )
 
-                # ✅ STEP LOG (STRICT)
+                #  STEP LOG 
                 log_step(
                     step=steps + 1,
                     action=action_str,
@@ -131,16 +131,16 @@ def run_baseline():
     finally:
         total_reward = sum(rewards)
 
-        # ✅ SUCCESS
+        #  SUCCESS
         success = total_reward > 0
 
-        # 🔥 HEALTH METRIC
+        #  HEALTH METRIC
         avg_health = sum(health_history) / len(health_history) if health_history else 0
 
-        # 🔥 EFFICIENCY METRIC
+        #  EFFICIENCY METRIC
         efficiency = total_reward / (len(rewards) if rewards else 1)
 
-        # ✅ END LOG (STRICT)
+        #  END LOG 
         log_end(success, steps, rewards, avg_health, efficiency)
 
 
