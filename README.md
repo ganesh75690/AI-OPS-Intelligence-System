@@ -217,6 +217,14 @@ The reward is calculated based on:
 - Real-time execution with explainable logs
 - Deployed and accessible live (Hugging Face)
 - Designed like a real AI Ops production system
+
+# 📋 Task Definitions :
+
+| Task | Difficulty | Description |
+|------|----------|------------|
+| Email Triage | Easy | Prioritize incoming emails |
+| Support Routing | Medium | Assign tickets efficiently |
+| Incident Optimization | Hard | Multi-step decision optimization |
 ---
 ## 🔁 Learning Feedback Loop :
 
