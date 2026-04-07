@@ -425,8 +425,8 @@ def run():
     result = run_baseline()
     
     return {
-        "score": result["average_score"],
-        "steps": result["steps"],
+        "tasks": result["tasks"],
+        "score": result["score"],
         "done": True
     }
 
