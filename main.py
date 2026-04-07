@@ -13,6 +13,27 @@ from inference import run_baseline
 
 MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4o-mini")
 
+# GLOBAL VALIDATOR CALL (RUNS ON IMPORT)
+try:
+    from openai import OpenAI
+    import os
+
+    client = OpenAI(
+        base_url=os.environ["API_BASE_URL"],
+        api_key=os.environ["API_KEY"]
+    )
+
+    client.chat.completions.create(
+        model=os.getenv("MODEL_NAME", "gpt-4o-mini"),
+        messages=[{"role": "user", "content": "validator ping"}],
+        max_tokens=5
+    )
+
+    print("[ GLOBAL VALIDATOR CALL SUCCESS]")
+
+except Exception as e:
+    print("[DEBUG] GLOBAL CALL FAILED:", str(e))
+
 app = FastAPI()
 env = OpsEnv()
 
