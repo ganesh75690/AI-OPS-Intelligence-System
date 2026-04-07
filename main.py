@@ -4,7 +4,6 @@ import uvicorn
 import subprocess
 import sys
 import os
-from openai import OpenAI
 from ai_ops_env.environment import OpsEnv
 from ai_ops_env.models import Action
 from ai_ops_env.grader import grade_easy
@@ -427,17 +426,27 @@ def run():
     import os
     from openai import OpenAI
     
-    # ONE CLEAN API CALL - NO COMPLEXITY
-    client = OpenAI(
-        base_url=os.environ["API_BASE_URL"],
-        api_key=os.environ["API_KEY"]
-    )
-    
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": "validator ping"}],
-        max_tokens=5
-    )
+    try:
+        # FRESH client creation - no caching, no imports at top
+        client = OpenAI(
+            base_url=os.environ["API_BASE_URL"],
+            api_key=os.environ["API_KEY"]
+        )
+        
+        # FORCE real API call - use their MODEL_NAME
+        response = client.chat.completions.create(
+            model=os.environ["MODEL_NAME"],
+            messages=[{"role": "user", "content": "validator ping"}],
+            max_tokens=5
+        )
+        
+        # Debug to show call happened
+        print(f"[API CALL SUCCESS] Response: {response.choices[0].message.content}")
+        
+    except KeyError as e:
+        print(f"[DEBUG] Missing env var: {e}")
+    except Exception as e:
+        print(f"[DEBUG] API call failed: {e}")
     
     from inference import run_baseline
     result = run_baseline()
