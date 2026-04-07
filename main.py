@@ -1,13 +1,17 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from fastapi.responses import HTMLResponse
-from ai_ops_env.environment import OpsEnv
-from ai_ops_env.models import Action
-from ai_ops_env.tasks import get_tasks
-from ai_ops_env.grader import grade_easy
-from inference import run_baseline
+import uvicorn
 import subprocess
 import sys
 import os
+from openai import OpenAI
+from ai_ops_env.environment import OpsEnv
+from ai_ops_env.models import Action
+from ai_ops_env.grader import grade_easy
+from ai_ops_env.tasks import get_tasks
+from inference import run_baseline
+
+MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4o-mini")
 
 app = FastAPI()
 env = OpsEnv()
@@ -420,6 +424,23 @@ def inference_raw():
 
 @app.get("/run")
 def run():
+    try:
+        client = OpenAI(
+            base_url=os.environ["API_BASE_URL"],
+            api_key=os.environ["API_KEY"]
+        )
+
+        client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[{"role": "user", "content": "validator ping"}],
+            max_tokens=5
+        )
+
+        print("[DEBUG] VALIDATOR CALL SUCCESS")
+
+    except Exception as e:
+        print("[DEBUG] VALIDATOR CALL FAILED:", str(e))
+
     from inference import run_baseline
     
     result = run_baseline()
