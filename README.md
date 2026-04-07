@@ -332,18 +332,7 @@ The AI Ops system evaluates each decision using a hybrid scoring mechanism combi
 - **Action Score (a):** Quality of the selected decision  
 - **Efficiency Score (e):** System performance impact  
 
-## 🔹 Reward Formula :
 
-Final reward is computed as:
-
-R = (0.4 × p) + (0.4 × a) + (0.2 × e)
-
-## 🔹 Example Decision Step :
-
-```text
-Step 4:
-p = 1.0, a = 1.0, e = 0.87
-Reward = 0.97 → OPTIMAL decision
 ```
 ---
 # 👨‍💻 Author :
