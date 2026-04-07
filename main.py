@@ -418,6 +418,18 @@ def inference_raw():
             "error": str(e)
         }
 
+@app.get("/run")
+def run():
+    from inference import run_baseline
+    
+    result = run_baseline()
+    
+    return {
+        "score": result["average_score"],
+        "steps": result["steps"],
+        "done": True
+    }
+
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8002) 
+    uvicorn.run(app, host="127.0.0.1", port=8002)
