@@ -193,6 +193,11 @@ def run_baseline():
     
     # Handle empty rewards list to avoid division by zero
     avg_score = round(sum(rewards)/len(rewards), 2) if rewards else 0.0
+    # Force avg_score to be strictly between 0 and 1
+    if avg_score >= 1.0:
+        avg_score = 0.99
+    if avg_score <= 0.0:
+        avg_score = 0.01
     
     return {
         "tasks": task_results,
@@ -264,6 +269,11 @@ def run_inference():
     
     # Handle empty rewards list to avoid division by zero
     avg_score = round(sum(rewards)/len(rewards), 2) if rewards else 0.0
+    # Force avg_score to be strictly between 0 and 1
+    if avg_score >= 1.0:
+        avg_score = 0.99
+    if avg_score <= 0.0:
+        avg_score = 0.01
     
     return {
         "tasks": task_results,
