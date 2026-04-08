@@ -27,8 +27,6 @@ It dynamically analyzes incoming tasks, prioritizes them using a Hybrid Reinforc
 
 ## 🔗 Key Features :
 
--  Real-time task processing & optimization  
-
 -  Hybrid RL + LLM decision intelligence  
 
 - Transparent reward calculation system  
