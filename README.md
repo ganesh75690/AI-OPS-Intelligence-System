@@ -23,7 +23,7 @@ Autonomous Decision-Making Environment for Task Prioritization.
 It dynamically analyzes incoming tasks, prioritizes them using a Hybrid Reinforcement Learning + LLM model, and continuously optimizes decisions for maximum efficiency.
  Built to replicate how modern AI-driven operations systems make intelligent, real-time decisions at scale. 
 
----
+---                  
 
 ## 🔗 Key Features :
 
@@ -117,6 +117,18 @@ ai-ops-system/
 - main.py / server/ → API + UI interface
 - configs/ → Environment and runtime configurations
 - Dockerfile → Enables containerized deployment on Hugging Face
+
+---
+```
+| Task Name                        | Description                                                                          
+|----------------------------------|-------------------------------------------------------------------------------------|
+| Load Balancing Optimization      | Distributes workloads across systems to avoid overload and ensure smooth performance
+| Anomaly Detection & Monitoring   | Identifies unusual patterns or failures in system behavior                 
+| Resource Allocation Planning     | Allocates CPU, memory, and network resources efficiently                 
+| Incident Response Automation     | Handles system failures and alerts automatically                            
+| Performance Tuning Engine        | Adjusts system parameters for optimal performance                            
+| Cost Efficiency Optimization     | Reduces unnecessary resource usage and operational costs 
+```
 ---
 ## 🔗 Output format :
 ```
