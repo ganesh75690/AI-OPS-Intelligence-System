@@ -34,9 +34,8 @@ Autonomous Decision-Making Environment for Task Prioritization.
 ---
 ## 🔗 Overview :
 
- AI Ops System is a next-generation autonomous decision engine that simulates real-world operational intelligence.
-It dynamically analyzes incoming tasks, prioritizes them using a Hybrid Reinforcement Learning + LLM model, and continuously optimizes decisions for maximum efficiency.
- Built to replicate how modern AI-driven operations systems make intelligent, real-time decisions at scale. 
+ This project introduces a Hybrid AI Ops Autonomous Decision Engine that leverages both Reinforcement Learning (RL) and Large Language Model (LLM) reasoning to optimize task execution in dynamic environments. The system is designed to intelligently manage and prioritize tasks under varying system conditions such as load, resource availability, and operational constraints.
+At its core, the solution functions as an adaptive decision-making agent that continuously observes the system state, evaluates task priorities, and selects optimal actions to maximize efficiency. By incorporating a reward-driven learning mechanism, the system improves its performance step-by-step, demonstrating progressive optimization across execution cycles.
 
 ---                  
 
@@ -53,14 +52,71 @@ It dynamically analyzes incoming tasks, prioritizes them using a Hybrid Reinforc
 -  REST API endpoints for integration   
    
 ---
+## 🔗 System Architecture :
+<div align="center">
+ 
+```
+User Request / Validator
+        ↓
+     FastAPI Server (main.py)
+        ↓
+     AI Engine (inference.py)
+        ↓
+ RL Decision + LLM Reasoning
+        ↓
+ Task Execution (ai_ops_env)
+        ↓
+ Structured Output ([START][STEP][END])
+```
+</div>
+
+---
 ## 🔗 Reward System (Core Logic) :
 
 The system evaluates each decision using a weighted scoring model:
 ```
 Final Reward: round((w_priority * priority_score) + (w_action * action_score) + (w_efficiency * efficiency_score), 2)
 ```
+## 🔗 Score Calculation :
+
+Final score is computed as:
+Normalized average of rewards across all steps
+Ensures score remains in range **(0, 1)** as required by evaluation
+###  Example
+```
+Rewards: `0.27, 0.39, 0.51, 0.63, 0.75`  
+Score ≈ 0.51
+```
+---
+## 🔗 Reward Progression Logic :
+
+<div align="center">
+
+| Phase                     | Description                                                                 | Example Rewards        |
+|---------------------------|-----------------------------------------------------------------------------|-----------------------|
+| **Early Steps** *(Exploration Phase)* | Lower rewards reflect initial uncertainty while evaluating actions        | 0.27, 0.39            |
+| **Middle Steps** *(Learning Phase)*   | Moderate rewards indicate improved decision-making with feedback          | 0.51, 0.63            |
+| **Final Step** *(Optimization Phase)* | Higher reward represents convergence toward optimal strategy              | 0.75+                 |
+
+</div>
+
+---
+## 🔗 Step-wise Optimization :
+
+<div align="center">
+
+| Step | Description |
+|------|-------------|
+| **1. Analyze** | Analyzes current system load and task context |
+| **2. Select Action** | Selects an action (assign, etc.) based on priority |
+| **3. Evaluate** | Evaluates the outcome using a reward function |
+
+</div>
+
 ---
 ## 🔗 Endpoints of the system :
+
+<div align="center">
 
 | Endpoint | Description                |
 |----------|----------------------------|
@@ -68,8 +124,13 @@ Final Reward: round((w_priority * priority_score) + (w_action * action_score) + 
 | `/step`  | Execute optimization step  |
 | `/state` | View current tasks         |
 | `/reset` | Reset environment          |
+
+</div>
+
 ---
 ## 🔗 Tech Stack :
+
+<div align="center">
 
 | Category                | Technology                          |
 |------------------------|--------------------------------------|
@@ -78,6 +139,8 @@ Final Reward: round((w_priority * priority_score) + (w_action * action_score) + 
 | Environment Simulation| Custom AI Ops Environment            |
 | Deployment            | Hugging Face Spaces (Docker)         |
 | UI                    | Terminal-style Web Interface         |
+
+</div>
 
 ---
 ## 🔗 Structure Overview :
@@ -93,6 +156,9 @@ Final Reward: round((w_priority * priority_score) + (w_action * action_score) + 
 
 ---
 ## 🔗 Tasks :
+
+<div align="center">
+
 | Task Name                        | Description                                                                          
 |----------------------------------|-------------------------------------------------------------------------------------|
 | Load Balancing Optimization      | Distributes workloads across systems to avoid overload and ensure smooth performance
@@ -102,6 +168,12 @@ Final Reward: round((w_priority * priority_score) + (w_action * action_score) + 
 | Performance Tuning Engine        | Adjusts system parameters for optimal performance                            
 | Cost Efficiency Optimization     | Reduces unnecessary resource usage and operational costs 
 | Intelligent Scheduling           | Predicts system failure
+| basic_system_monitoring          | Monitor basic system health and status
+| simple_log_analysis              | Analyze basic system logs for errors
+| database_performance_tuning      | Optimize database queries and indexing for better performance
+
+</div>
+
 ---
 ## 🔗 Output format :
 ```
@@ -122,21 +194,6 @@ Supports proxy-based evaluation (LiteLLM)
 No hardcoded credentials
 Fully environment-driven
 
----
-## 🔗 System Architecture :
-```
-User Request / Validator
-        ↓
-     FastAPI Server (main.py)
-        ↓
-     AI Engine (inference.py)
-        ↓
- RL Decision + LLM Reasoning
-        ↓
- Task Execution (ai_ops_env)
-        ↓
- Structured Output ([START][STEP][END])
-```
 ---
 ## 🔗 How to Run :
 ```
