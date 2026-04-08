@@ -77,17 +77,6 @@ The system evaluates each decision using a weighted scoring model:
 ```
 Final Reward: round((w_priority * priority_score) + (w_action * action_score) + (w_efficiency * efficiency_score), 2)
 ```
-## 🔗 Score Calculation :
-
-Final score is computed as:
-Normalized average of rewards across all steps
-Ensures score remains in range **(0, 1)** as required by evaluation
-###  Example
-```
-Rewards: `0.27, 0.39, 0.51, 0.63, 0.75`  
-Score ≈ 0.51
-```
----
 ## 🔗 Reward Progression Logic :
 
 <div align="center">
@@ -99,6 +88,33 @@ Score ≈ 0.51
 | **Final Step** *(Optimization Phase)* | Higher reward represents convergence toward optimal strategy              | 0.75+                 |
 
 </div>
+
+---
+## 🔗 Score Calculation :
+
+Final score is computed as:
+Normalized average of rewards across all steps
+Ensures score remains in range **(0, 1)** as required by evaluation
+###  Example
+```
+Rewards: `0.27, 0.39, 0.51, 0.63, 0.75`  
+Score ≈ 0.51
+```
+## 🔗 Score Meaning :
+
+<div align="center">
+
+|  Score Range  |  Interpretation           |  System Behavior |
+|---------------|--------------------------|--------------------|
+| **0.00 – 0.30** | Low performance         | Initial exploration phase with uncertain or suboptimal decisions |
+| **0.30 – 0.50** | Moderate performance    | System begins adapting but decisions are still improving |
+| **0.50 – 0.70** | Good performance        | Stable decision-making with noticeable optimization |
+| **0.70 – 0.85** | High performance        | Efficient task handling with strong decision accuracy |
+| **0.85 – 0.99** | Near-optimal performance | System converges toward optimal strategy with maximum efficiency |
+
+</div>
+
+
 
 ---
 ## 🔗 Step-wise Optimization :
