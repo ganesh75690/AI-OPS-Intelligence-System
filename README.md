@@ -64,48 +64,6 @@ Final Reward: round((w_priority * priority_score) + (w_action * action_score) + 
 | Deployment            | Hugging Face Spaces (Docker)         |
 | UI                    | Terminal-style Web Interface         |
 
-## 🔗 Project Structure :
-
-```bash
-ai-ops-system/
-│
-├── inference.py              # OpenEnv inference script (core evaluation logic)
-├── main.py                   # FastAPI server + UI handling
-├── client.py                 # API / client interaction layer
-├── models.py                 # Data models (actions, observations, rewards)
-├── openenv.yaml              # OpenEnv configuration and metadata
-│
-├── ai_ops_env/               # Reinforcement Learning environment
-│   ├── state.py              # Task definitions (Email, Support, Incident)
-│   └── ...                   # Environment logic and helpers
-│
-├── agent/                    # Core agent logic
-├── agents/                   # Multi-agent / extended logic
-├── core/                     # Core system components
-├── utils/                    # Utility functions
-├── configs/                  # Configuration files
-│
-├── tasks/                    # Task-specific implementations
-├── evaluation/               # Evaluation and scoring logic
-├── tests/                    # Testing modules
-│
-├── server/                   # Backend server components
-├── docs/                     # Documentation assets
-│
-├── Dockerfile                # Container setup (Hugging Face deployment)
-├── requirements.txt          # Python dependencies
-├── pyproject.toml            # Project configuration
-├── uv.lock                   # Dependency lock file
-│
-├── README.md                 # Main project documentation
-├── CODE_OF_CONDUCT.md        # Community guidelines
-├── LICENSE                   # License information
-├── BENCHMARK.md              # Benchmark details
-│
-├── .gitignore                # Ignored files
-└── .deployignore             # Deployment exclusions
-```
-
 ---
 ## 🔗 Structure Overview :
 
@@ -264,12 +222,52 @@ The reward is calculated based on:
 - Decision correctness
 - Efficiency of execution
 ---
-## 🔗 Screenshots :
+## 🔗 Project Structure :
 
+```bash
+ai-ops-system/
+│
+├── inference.py              # OpenEnv inference script (core evaluation logic)
+├── main.py                   # FastAPI server + UI handling
+├── client.py                 # API / client interaction layer
+├── models.py                 # Data models (actions, observations, rewards)
+├── openenv.yaml              # OpenEnv configuration and metadata
+│
+├── ai_ops_env/               # Reinforcement Learning environment
+│   ├── state.py              # Task definitions (Email, Support, Incident)
+│   └── ...                   # Environment logic and helpers
+│
+├── agent/                    # Core agent logic
+├── agents/                   # Multi-agent / extended logic
+├── core/                     # Core system components
+├── utils/                    # Utility functions
+├── configs/                  # Configuration files
+│
+├── tasks/                    # Task-specific implementations
+├── evaluation/               # Evaluation and scoring logic
+├── tests/                    # Testing modules
+│
+├── server/                   # Backend server components
+├── docs/                     # Documentation assets
+│
+├── Dockerfile                # Container setup (Hugging Face deployment)
+├── requirements.txt          # Python dependencies
+├── pyproject.toml            # Project configuration
+├── uv.lock                   # Dependency lock file
+│
+├── README.md                 # Main project documentation
+├── CODE_OF_CONDUCT.md        # Community guidelines
+├── LICENSE                   # License information
+├── BENCHMARK.md              # Benchmark details
+│
+├── .gitignore                # Ignored files
+└── .deployignore             # Deployment exclusions
+## 🔗 Screenshots :
+```
 <img width="1918" height="766" alt="image" src="https://github.com/user-attachments/assets/6c9464e9-07f1-4ba0-854e-4bfaccdaed7e" />
 
 ---
-## 🔗 Author :
+## 🔗 Contribution :
 B. SAI GANESH
                     
     AI Developer | System Builder | Innovator
