@@ -144,6 +144,8 @@ def safe_get_task(obs):
 def run_baseline():
     tasks = ["load_balancing_optimization", "anomaly_detection_monitoring", "resource_allocation_planning", "incident_response_automation", "performance_tuning_engine", "cost_efficiency_optimization"]
     
+    all_task_scores = []  # Collect scores from ALL tasks
+    
     for task_index, task_name in enumerate(tasks):
         print(f"[START] task={task_name} env=ai_ops model={MODEL_NAME}", flush=True)
         
@@ -175,6 +177,9 @@ def run_baseline():
         if score <= 0.0:
             score = 0.01
             
+        # Collect this task's score
+        all_task_scores.append(score)
+            
         print(
             f"[END] success=true steps={len(rewards)} score={score:.2f} rewards={','.join(map(str, rewards))}",
             flush=True
@@ -183,16 +188,16 @@ def run_baseline():
         # Add spacing between tasks
         print()
     
-    # Create task results with individual scores
+    # Create task results with scores from ALL tasks
     task_results = []
-    for i, r in enumerate(rewards):
+    for i, task_score in enumerate(all_task_scores):
         task_results.append({
             "task_id": i+1,
-            "score": min(max(r, 0.01), 0.99)  # force between (0,1)
+            "score": min(max(task_score, 0.01), 0.99)  # force between (0,1)
         })
     
     # Handle empty rewards list to avoid division by zero
-    avg_score = round(sum(rewards)/len(rewards), 2) if rewards else 0.0
+    avg_score = round(sum(all_task_scores)/len(all_task_scores), 2) if all_task_scores else 0.0
     # Force avg_score to be strictly between 0 and 1
     if avg_score >= 1.0:
         avg_score = 0.99
@@ -202,11 +207,13 @@ def run_baseline():
     return {
         "tasks": task_results,
         "score": avg_score,
-        "steps": len(rewards)
+        "steps": len(all_task_scores)
     }
 
 def run_inference():
     tasks = ["load_balancing_optimization", "anomaly_detection_monitoring", "resource_allocation_planning", "incident_response_automation", "performance_tuning_engine", "cost_efficiency_optimization"]
+    
+    all_task_scores = []  # Collect scores from ALL tasks
     
     for task_index, task_name in enumerate(tasks):
         print(f"[START] task={task_name} env=ai_ops model={MODEL_NAME}", flush=True)
@@ -251,6 +258,9 @@ def run_inference():
         if score <= 0.0:
             score = 0.01
             
+        # Collect this task's score
+        all_task_scores.append(score)
+            
         print(
             f"[END] success=true steps={len(rewards)} score={score:.2f} rewards={','.join(map(str, rewards))}",
             flush=True
@@ -259,16 +269,16 @@ def run_inference():
         # Add spacing between tasks
         print()
     
-    # Create task results with individual scores
+    # Create task results with scores from ALL tasks
     task_results = []
-    for i, r in enumerate(rewards):
+    for i, task_score in enumerate(all_task_scores):
         task_results.append({
             "task_id": i+1,
-            "score": min(max(r, 0.01), 0.99)  # force between (0,1)
+            "score": min(max(task_score, 0.01), 0.99)  # force between (0,1)
         })
     
     # Handle empty rewards list to avoid division by zero
-    avg_score = round(sum(rewards)/len(rewards), 2) if rewards else 0.0
+    avg_score = round(sum(all_task_scores)/len(all_task_scores), 2) if all_task_scores else 0.0
     # Force avg_score to be strictly between 0 and 1
     if avg_score >= 1.0:
         avg_score = 0.99
@@ -278,7 +288,7 @@ def run_inference():
     return {
         "tasks": task_results,
         "score": avg_score,
-        "steps": len(rewards)
+        "steps": len(all_task_scores)
     }
 
 if __name__ == "__main__":
