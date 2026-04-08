@@ -261,6 +261,28 @@ docker build -t ai-ops-system .
 docker run -p 8000:8000 ai-ops-system
 ```
 ---
+## 🔗 Agent Purpose :
+
+<div align="center">
+
+| 🔹 Aspect | 💡 Description |
+|----------|----------------|
+| **Primary Goal** | To act as an autonomous decision-making system that optimizes task execution in dynamic environments |
+| **Core Function** | Analyze system conditions (load, priority, performance) and take optimal actions to maximize efficiency |
+| **Decision Approach** | Combines Reinforcement Learning (RL) with LLM-based reasoning for intelligent and adaptive decisions |
+| **Learning Mechanism** | Uses reward-driven feedback to continuously improve performance step-by-step |
+| **Task Handling** | Dynamically prioritizes and assigns tasks based on real-time system state |
+| **Reliability** | Includes deterministic fallback logic to ensure stable operation even without external APIs |
+| **Adaptability** | Adjusts decisions based on changing conditions, ensuring consistent optimization |
+| **Real-world Use Cases** | AI Ops, cloud optimization, workflow automation, task scheduling, resource management |
+| **Key Advantage** | Moves beyond rule-based systems to a self-learning, intelligent automation engine |
+| **Final Objective** | Enable scalable, efficient, and autonomous operations with minimal human intervention |
+
+</div>
+
+
+---
+
 ## 🔗 AI Intelligence :
 
 This system combines Reinforcement Learning and LLM reasoning to enable:
