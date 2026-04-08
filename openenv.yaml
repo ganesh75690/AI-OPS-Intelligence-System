@@ -25,7 +25,7 @@ tasks:
     
   incident_response_automation:
     description: Automate incident response procedures
-    grader: grade_easy
+    grader: grade_hard
     
   performance_tuning_engine:
     description: Tune system performance parameters
@@ -37,4 +37,16 @@ tasks:
     
   intelligent_scheduling_system:
     description: Intelligent scheduling system for optimal task management
+    grader: grade_medium
+    
+  database_performance_tuning:
+    description: Optimize database queries and indexing for better performance
     grader: grade_hard
+    
+  basic_system_monitoring:
+    description: Monitor basic system health and status
+    grader: grade_easy
+    
+  simple_log_analysis:
+    description: Analyze basic system logs for errors
+    grader: grade_easy
