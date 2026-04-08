@@ -1,5 +1,20 @@
  <h1 align="center"><u> 💻 AI OPS Intelligence System ♾️ </u></h1>
 
+<div align="center">
+
+| Title          | AI Ops System |
+|----------------|--------------|
+| Emoji          | 🤖          |
+| Color From     | blue         |
+| Color To       | green        |
+| SDK            | docker       |
+| Python Version | 3.10         |
+| App port       | 7860         |
+| App File       | app.py       |
+| Tag            | OPENENV      |
+
+</div>
+
 Autonomous Decision-Making Environment for Task Prioritization. 
 - “From tasks to intelligence — building systems that learn to decide.”
 
