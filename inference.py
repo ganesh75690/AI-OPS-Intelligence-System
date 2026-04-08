@@ -135,7 +135,7 @@ def safe_get_task(obs):
     return None
 
 def run_baseline():
-    tasks = ["easy", "medium", "hard", "medium", "easy"]
+    tasks = ["load_balancing_optimization", "anomaly_detection_monitoring", "resource_allocation_planning", "incident_response_automation", "performance_tuning_engine", "cost_efficiency_optimization"]
     
     for task_index, task in enumerate(tasks):
         print(f"[START] task={task} env=ai_ops model={MODEL_NAME}", flush=True)
@@ -143,11 +143,13 @@ def run_baseline():
         rewards = []
         
         # Different base reward based on difficulty
-        if task == "easy":
+        if task in ["performance_tuning_engine", "cost_efficiency_optimization"]:
             base_reward = 0.10
-        elif task == "medium":
+        elif task in ["anomaly_detection_monitoring", "resource_allocation_planning"]:
             base_reward = 0.20
-        else:  # hard
+        elif task == "load_balancing_optimization":
+            base_reward = 0.25
+        else:  # incident_response_automation
             base_reward = 0.30
         
         for step in range(1, 6):
@@ -170,6 +172,9 @@ def run_baseline():
             f"[END] success=true steps={len(rewards)} score={score:.2f} rewards={','.join(map(str, rewards))}",
             flush=True
         )
+        
+        # Add spacing between tasks
+        print()
     
     # Create task results with individual scores
     task_results = []
