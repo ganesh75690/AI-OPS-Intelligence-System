@@ -13,40 +13,40 @@ endpoints:
 tasks:
   load_balancing_optimization:
     description: Optimize load balancing across distributed systems
-    grader: grader.grade_medium
+    grader: grader.grader.grade_medium
     
   anomaly_detection_monitoring:
     description: Detect and respond to system anomalies
-    grader: grader.grade_medium
+    grader: grader.grader.grade_medium
     
   resource_allocation_planning:
     description: Plan optimal resource allocation strategies
-    grader: grader.grade_medium
+    grader: grader.grader.grade_medium
     
   incident_response_automation:
     description: Automate incident response procedures
-    grader: grader.grade_hard
+    grader: grader.grader.grade_hard
     
   performance_tuning_engine:
     description: Tune system performance parameters
-    grader: grader.grade_hard
+    grader: grader.grader.grade_hard
     
   cost_efficiency_optimization:
     description: Optimize costs while maintaining performance
-    grader: grader.grade_hard
+    grader: grader.grader.grade_hard
     
   intelligent_scheduling_system:
     description: Intelligent scheduling system for optimal task management
-    grader: grader.grade_medium
+    grader: grader.grader.grade_medium
     
   database_performance_tuning:
     description: Optimize database queries and indexing for better performance
-    grader: grader.grade_hard
+    grader: grader.grader.grade_hard
     
   basic_system_monitoring:
     description: Monitor basic system health and status
-    grader: grader.grade_easy
+    grader: grader.grader.grade_easy
     
   simple_log_analysis:
     description: Analyze basic system logs for errors
-    grader: grader.grade_easy
+    grader: grader.grader.grade_easy
