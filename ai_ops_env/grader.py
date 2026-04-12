@@ -1,5 +1,8 @@
 def grade_easy(action, task):
-    if task.priority == "high" and action.action_type == "assign":
+    # Handle both dict and object tasks
+    priority = task.get("priority") if isinstance(task, dict) else getattr(task, "priority", "medium")
+    
+    if priority == "high" and action.action_type == "assign":
         return 0.99  # Force below 1.0
     elif action.action_type == "assign":
         return 0.5
@@ -8,10 +11,13 @@ def grade_easy(action, task):
 
 def grade_medium(action, task):
     score = 0.0
+    
+    # Handle both dict and object tasks
+    priority = task.get("priority") if isinstance(task, dict) else getattr(task, "priority", "medium")
 
-    if task.priority == "high" and action.action_type == "assign":
+    if priority == "high" and action.action_type == "assign":
         score += 0.6
-    if task.priority == "medium" and action.action_type == "assign":
+    if priority == "medium" and action.action_type == "assign":
         score += 0.3
     if action.action_type == "escalate":
         score += 0.2
@@ -23,13 +29,20 @@ def grade_hard(actions, tasks):
     score = 0.0
 
     for action in actions:
-        task = next((t for t in tasks if t.id == action.task_id), None)
+        # Find task by ID (handle both dict and object tasks)
+        task = None
+        if isinstance(tasks, list):
+            task = next((t for t in tasks if (t.get("id") if isinstance(t, dict) else getattr(t, "id", None)) == action.task_id), None)
+        
         if not task:
             continue
 
-        if task.priority == "high" and action.action_type == "assign":
+        # Get priority (handle both dict and object tasks)
+        priority = task.get("priority") if isinstance(task, dict) else getattr(task, "priority", "medium")
+
+        if priority == "high" and action.action_type == "assign":
             score += 0.3
-        elif task.priority == "medium" and action.action_type == "assign":
+        elif priority == "medium" and action.action_type == "assign":
             score += 0.15
         elif action.action_type == "ignore":
             score -= 0.3
