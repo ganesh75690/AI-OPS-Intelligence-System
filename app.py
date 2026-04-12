@@ -9,7 +9,7 @@ import os
 from ai_ops_env.environment import AIOpsEnv
 from ai_ops_env.models import Action
 # Import grader functions from ai_ops_env for validation system
-from ai_ops_env.grader import grade_easy, grade_medium, grade_hard
+from grader import grade_easy, grade_medium, grade_hard
 
 # Map grader names to functions for validation
 GRADER_FUNCTIONS = {
