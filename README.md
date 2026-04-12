@@ -18,7 +18,7 @@
 Autonomous Incident Detection & Recovery using Reinforcement learning environment for Task Prioritization. 
 - “From tasks to intelligence — building systems that learn to decide.”
 
-- Category: AI Systems • Reinforcement Learning • DevOps Automation
+- Category: AI Systems • Reinforcement Learning • DevOps Automation • OpenEnv Environment • Autonomous System 
 
 ---
 ## 🔗 Overview :
