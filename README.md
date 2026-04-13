@@ -132,7 +132,15 @@ Else → Continue next step
 </div>
 
 ---
+## 🔗 Why This System Stands Out :
 
+- Combines reinforcement learning with AI Ops to enable autonomous, end-to-end incident management  
+- Moves beyond static rule-based systems to adaptive, reward-driven decision-making  
+- Provides a complete decision pipeline from detection to recovery with measurable system impact  
+- Integrates stochastic simulation with deterministic reproducibility for reliable evaluation  
+- Delivers explainable execution through structured logs, improving transparency and trust  
+- Designed not just as a prototype, but as a scalable foundation for real-world self-healing infrastructure  
+---
 
 ## 🔗 Workflow :
 The system operates through a structured, step-by-step pipeline where a user-triggered event initializes the environment with current system metrics such as CPU usage, memory, error rate, and latency. The AI agent first detects any anomalies and performs a detailed analysis to identify the root cause of the issue. Based on the observed state, the reinforcement learning agent selects the most optimal action using its learned policy and reward feedback.
@@ -475,6 +483,24 @@ Transitions to a new state
 This loop continues until the system reaches a stable condition or the episode terminates.
 
 ---
+
+## 🔗 System Reliability & Robustness :
+
+<div align="center">
+
+| Aspect                 | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| Stochastic Resilience  | Handles uncertain and dynamic system conditions through stochastic modeling |
+| Stable Execution       | Ensures controlled state transitions with clear termination logic           |
+| Failure Handling       | Supports failure-aware actions with recovery and retry mechanisms           |
+| Reproducibility        | Maintains consistent behavior using deterministic (seed-based) execution    |
+| Resource Efficiency    | Designed to operate within constrained resources for reliable performance   |
+| Standard Compliance    | Provides structured outputs aligned with OpenEnv standards                  |
+
+</div>
+
+---
+
 ## 🔗 Project Structure :
 
 ```bash
