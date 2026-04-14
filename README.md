@@ -139,8 +139,32 @@ Else → Continue next step
 - Provides a complete decision pipeline from detection to recovery with measurable system impact  
 - Integrates stochastic simulation with deterministic reproducibility for reliable evaluation  
 - Delivers explainable execution through structured logs, improving transparency and trust  
-- Designed not just as a prototype, but as a scalable foundation for real-world self-healing infrastructure  
+- Designed not just as a prototype, but as a scalable foundation for real-world self-healing infrastructure
+  
 ---
+## 🔗 Technical System Overview :
+
+This table presents a technical snapshot of the system architecture, capturing how each core component is designed and implemented to enable intelligent, autonomous operations. It reflects a cohesive engineering approach where state representation, decision logic, and execution mechanisms are tightly integrated to ensure reliability, scalability, and performance. Together, these components demonstrate a production-oriented system capable of handling complex, real-world AI Ops scenarios with structured, data-driven decision-making.
+
+<div align="center">
+
+| Component          | Specification              | Implementation Detail                                      | Outcome                                   |
+|--------------------|----------------------------|------------------------------------------------------------|-------------------------------------------|
+| Environment Engine | RL-based simulation        | Custom AI Ops environment with state-action transitions    | Dynamic system behavior modeling          |
+| State Representation| Multi-metric system state | CPU, Memory, Error Rate, Latency encoded as state vector   | Accurate system condition awareness       |
+| Action Space       | Discrete operational actions| Scale resources, stabilize system, detect anomalies, optimize load | Targeted and controlled interventions |
+| Reward Function    | Performance-driven scoring | Positive rewards for stabilization, penalties for failures | Reinforced optimal decision policies      |
+| Learning Strategy  | Adaptive policy optimization| Q-value inspired reward tracking with historical averaging| Continuous improvement over episodes      |
+| Task Framework     | Multi-scenario execution   | 10 tasks with difficulty and priority mapping              | Scalable and modular design               |
+| Execution Pipeline | Sequential decision flow   | Detection → Analysis → Decision → Execution → Recovery     | Structured and automated workflow         |
+| Logging System     | Structured event tracking  | Step-wise logs with state, action, reward, confidence      | Debuggable and explainable system         |
+| API Interface      | REST-based endpoints       | "/reset", "/step", "/state", "/tasks", "/grader"           | Standardized interaction layer            |
+| Deployment Stack   | Containerized environment  | Docker + Hugging Face Spaces deployment                    | Production-ready and accessible system    |
+
+</div>
+
+---
+
 
 ## 🔗 Workflow :
 The system operates through a structured, step-by-step pipeline where a user-triggered event initializes the environment with current system metrics such as CPU usage, memory, error rate, and latency. The AI agent first detects any anomalies and performs a detailed analysis to identify the root cause of the issue. Based on the observed state, the reinforcement learning agent selects the most optimal action using its learned policy and reward feedback.
